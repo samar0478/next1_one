@@ -560,6 +560,11 @@ function App() {
   });
 
   const content = SAMPLE_CONTENT[language] || SAMPLE_CONTENT.en;
+  
+  // Debug logging
+  console.log('Current language:', language);
+  console.log('Available languages:', Object.keys(SAMPLE_CONTENT));
+  console.log('Content site name:', content.siteName);
 
   useEffect(() => {
     localStorage.setItem('visitedLessons', JSON.stringify(visitedLessons));
